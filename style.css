@@ -50,6 +50,12 @@ form {
   padding: 70px;
   height: auto;
   gap: 25px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+button:hover {
+  scale: 0.9;
 }
 
 .inputs {
@@ -79,7 +85,7 @@ form {
   text-align: center;
   font-size: 20px;
   font-weight: 400;
-  width: fit-content;
+  width: 70%;
 }
 
 input::placeholder {
@@ -144,9 +150,27 @@ button {
   align-self: end;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 60px;
+  }
+
   form {
+    width: 70%;
+  }
+
+  .inputs div input {
     width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  form {
+    width: 65%;
     padding: 30px;
   }
 }
@@ -183,6 +207,17 @@ button {
 
   form {
     width: 80%;
+  }
+
+  .inputs div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+
+  .inputs div input {
+    width: 90%;
   }
 }
 
@@ -251,5 +286,32 @@ button {
   .gender button {
     width: 100%;
     padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 170px) {
+  h1 {
+    margin: 50px 30px 0;
+    font-size: 20px;
+  }
+
+  form {
+    width: 85%;
+    padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .gender button {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .inputs div input {
+    width: 90%;
+    align-self: center;
   }
 }

@@ -48,11 +48,15 @@ const runCalculations = () => {
 
   if (weight.Value === "" || height.Value === "" || age.value === "") {
     emptyError();
+    calculate.style.backgroundColor = "#299cfb";
+    calculate.style.color = "#fff";
     return;
   }
 
   if (isNaN(weightValue) || isNaN(heightValue) || isNaN(ageValue)) {
     NanError();
+    calculate.style.backgroundColor = "#299cfb";
+    calculate.style.color = "#fff";
     return;
   }
 
@@ -79,6 +83,8 @@ const runCalculations = () => {
 };
 
 calculate.addEventListener("click", (event) => {
+  calculate.style.backgroundColor = "#fff";
+  calculate.style.color = "#299cfb";
   event.preventDefault();
   runCalculations();
 });
