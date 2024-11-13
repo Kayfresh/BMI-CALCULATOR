@@ -51,7 +51,7 @@ const runCalculations = () => {
     return;
   }
 
-  if (isNaN(weightValue) || isNaN(heightValue) || isNaN(ageValue) ) {
+  if (isNaN(weightValue) || isNaN(heightValue) || isNaN(ageValue)) {
     NanError();
     return;
   }
@@ -94,5 +94,5 @@ reset.addEventListener("click", () => {
   height.value = "";
   BMIAnswer.textContent = "0.00";
   result.textContent = "-----";
-  result.style.color = "#000"
+  result.style.color = "#000";
 });
