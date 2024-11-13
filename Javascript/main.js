@@ -16,18 +16,18 @@ const BMIAnswer = document.getElementById("bmi-ans");
 const result = document.getElementById("health");
 
 male.addEventListener("click", () => {
-  maleIcon.style.display = 'block';
-  femaleIcon.style.display = 'none';
-  personIcon.style.display = 'none';
+  maleIcon.style.display = "block";
+  femaleIcon.style.display = "none";
+  personIcon.style.display = "none";
 
   male.style.backgroundColor = "#299cfb";
   female.style.backgroundColor = "#ebebeb";
 });
 
 female.addEventListener("click", () => {
-  maleIcon.style.display = 'none';
-  femaleIcon.style.display = 'block';
-  personIcon.style.display = 'none';
+  maleIcon.style.display = "none";
+  femaleIcon.style.display = "block";
+  personIcon.style.display = "none";
 
   female.style.backgroundColor = "#299cfb";
   male.style.backgroundColor = "#ebebeb";
@@ -35,29 +35,35 @@ female.addEventListener("click", () => {
 
 const emptyError = () => {
   return "Please input Value";
+
+  
+};
+
+const NanError = () => {
+  return "Please input a Number";
 };
 
 const runCalculations = () => {
   const weightValue = parseFloat(weight.value);
   const heightValue = parseFloat(height.value);
 
-  if (weightValue === "" || heightValue === "") {
+  if (weightValue === '' || heightValue === '') {
     emptyError();
+
+    alert: 'fff'
   }
 
   if (isNaN(weightValue) || isNaN(heightValue)) {
-    return "Please enter valid Number";
+    NanError();
   }
 
   if (weightValue && heightValue) {
-    const heightInM = heightValue / 100;
-
-    const bmi = weightValue / (heightInM * heightInM);
-
-    return bmi;
+    const bmi = weightValue / ((height/100)**2);
 
     BMIAnswer.textContent = "Your BMI is: " + bmi.toFixed(2);
-  }
+  };
 };
 
-calculate.addEventListener("click".runCalculations());
+calculate.addEventListener("click", () => {
+  runCalculations();
+});
