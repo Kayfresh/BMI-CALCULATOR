@@ -34,11 +34,11 @@ female.addEventListener("click", () => {
 });
 
 const emptyError = () => {
-  alert("Please input Value");
+  alert("Please input Value(s)");
 };
 
 const NanError = () => {
-  alert("Please input a Number");
+  alert("Please input Number(s)");
 };
 
 const runCalculations = () => {

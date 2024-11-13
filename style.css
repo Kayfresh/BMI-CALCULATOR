@@ -45,7 +45,7 @@ form {
   background-color: #fff;
   border: 1px solid #fff;
   border-radius: 15px;
-  width: 30%;
+  width: 40%;
   margin-top: 20px;
   padding: 70px;
   height: auto;
@@ -142,4 +142,114 @@ button {
 .bi-arrow-counterclockwise {
   font-size: 25px;
   align-self: end;
+}
+
+@media screen and (max-width: 800px) {
+  form {
+    width: 60%;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+
+  form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 33px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 32px;
+    margin: 50px 70px 15px;
+  }
+
+  form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 28px;
+    margin: 50px 70px 15px;
+  }
+
+  .inputs {
+    gap: 10px;
+  }
+
+  .inputs div h2 {
+    font-size: 25px;
+  }
+
+  .inputs div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+
+  .inputs div input {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    margin: 50px 50px 15px;
+    font-size: 26px;
+  }
+
+  form {
+    width: 70%;
+  }
+
+  .inputs div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+
+  .inputs div input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  h1 {
+    margin: 50px 30px 5px;
+  }
+
+  .inputs div input {
+    width: 100%;
+  }
+
+  .gender {
+    gap: 10px;
+    padding: 0;
+  }
+
+  .gender button {
+    width: 100%;
+    padding: 5px 10px;
+  }
 }
