@@ -34,36 +34,57 @@ female.addEventListener("click", () => {
 });
 
 const emptyError = () => {
-  return "Please input Value";
-
-  
+  alert("Please input Value");
 };
 
 const NanError = () => {
-  return "Please input a Number";
+  alert("Please input a Number");
 };
 
 const runCalculations = () => {
   const weightValue = parseFloat(weight.value);
   const heightValue = parseFloat(height.value);
 
-  if (weightValue === '' || heightValue === '') {
+  if (weight.Value === "" || height.Value === "") {
     emptyError();
-
-    alert: 'fff'
+    return;
   }
 
   if (isNaN(weightValue) || isNaN(heightValue)) {
     NanError();
+    return;
   }
 
   if (weightValue && heightValue) {
-    const bmi = weightValue / ((height/100)**2);
+    const bmi = weightValue / (heightValue / 100) ** 2;
 
     BMIAnswer.textContent = "Your BMI is: " + bmi.toFixed(2);
-  };
+
+    // Determine health status based on BMI
+    if (bmi < 18.5) {
+      result.textContent = "Underweight";
+      result.style.color = "blue";
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+      result.textContent = "Normal weight";
+      result.style.color = "green";
+    } else if (bmi >= 25 && bmi < 29.9) {
+      result.textContent = "Overweight";
+      result.style.color = "orange";
+    } else {
+      result.textContent = "Obesity";
+      result.style.color = "red";
+    }
+  }
 };
 
-calculate.addEventListener("click", () => {
+calculate.addEventListener("click", (event) => {
+  event.preventDefault();
   runCalculations();
+});
+
+reset.addEventListener("click", () => {
+  weight.value = "";
+  height.value = "";
+  BMIAnswer.textContent = "";
+  result.textContent = "";
 });
