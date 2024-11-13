@@ -1,7 +1,7 @@
 const personIcon = document.querySelector(".bi-person-bounding-box");
 const maleIcon = document.querySelector(".bi-gender-male");
 const femaleIcon = document.querySelector(".bi-gender-female");
-const reset = document.querySelector(".bi-box-arrow-left");
+const reset = document.querySelector(".bi-arrow-counterclockwise");
 
 const age = document.getElementById("age");
 const height = document.getElementById("height");
@@ -42,15 +42,16 @@ const NanError = () => {
 };
 
 const runCalculations = () => {
+  const ageValue = parseFloat(age.value);
   const weightValue = parseFloat(weight.value);
   const heightValue = parseFloat(height.value);
 
-  if (weight.Value === "" || height.Value === "") {
+  if (weight.Value === "" || height.Value === "" || age.value === "") {
     emptyError();
     return;
   }
 
-  if (isNaN(weightValue) || isNaN(heightValue)) {
+  if (isNaN(weightValue) || isNaN(heightValue) || isNaN(ageValue) ) {
     NanError();
     return;
   }
@@ -83,8 +84,15 @@ calculate.addEventListener("click", (event) => {
 });
 
 reset.addEventListener("click", () => {
+  age.value = "";
+  personIcon.style.display = "block";
+  maleIcon.style.display = "none";
+  femaleIcon.style.display = "none";
+  female.style.backgroundColor = "#ebebeb";
+  male.style.backgroundColor = "#ebebeb";
   weight.value = "";
   height.value = "";
-  BMIAnswer.textContent = "";
-  result.textContent = "";
+  BMIAnswer.textContent = "0.00";
+  result.textContent = "-----";
+  result.style.color = "#000"
 });

@@ -86,7 +86,7 @@ input::placeholder {
   font-size: 15px;
   text-align: start;
   padding: 5px;
-  color: #000;
+  color: darkgray;
   font-weight: 100;
 }
 
@@ -139,7 +139,7 @@ button {
   font-weight: 600;
 }
 
-.bi-box-arrow-left {
+.bi-arrow-counterclockwise {
   font-size: 25px;
   align-self: end;
 }
