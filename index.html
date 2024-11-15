@@ -11,68 +11,78 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <h1><abbr title="Body Mass Index">BMI</abbr> CALCULATOR</h1>
+    <header role="heading">
+      <h1><abbr title="Body Mass Index">BMI</abbr> CALCULATOR</h1>
+    </header>
 
-    <form id="bmiform">
-      <div class="icons">
-        <i class="bi bi-person-bounding-box"></i>
-        <i class="bi bi-gender-male"></i>
-        <i class="bi bi-gender-female"></i>
-      </div>
-
-      <div class="inputs">
-        <div>
-          <h2>Age:</h2>
-
-          <input type="text" placeholder="Enter your Age in Years" id="age" required />
+    <main role="main">
+      <form id="bmiform">
+        <div class="icons">
+          <i class="bi bi-person-bounding-box"></i>
+          <i class="bi bi-gender-male"></i>
+          <i class="bi bi-gender-female"></i>
         </div>
 
-        <div>
-          <h2>Height (cm):</h2>
+        <div class="inputs">
+          <div>
+            <h2>Age:</h2>
 
-          <input
-            type="text"
-            placeholder="Enter your height in 'cm'"
-            id="height"
-            required
-          />
+            <input
+              type="text"
+              placeholder="Enter your Age in Years"
+              id="age"
+              required
+            />
+          </div>
+
+          <div>
+            <h2>Height (cm):</h2>
+
+            <input
+              type="text"
+              placeholder="Enter your height in 'cm'"
+              id="height"
+              required
+            />
+          </div>
+
+          <div>
+            <h2>Weight (kg):</h2>
+
+            <input
+              type="text"
+              placeholder="Enter your weight in 'Kg'"
+              id="weight"
+              required
+            />
+          </div>
         </div>
 
-        <div>
-          <h2>Weight (kg):</h2>
+        <div class="gender">
+          <button type="button" id="male" name="gender" value="male">
+            Male
+          </button>
 
-          <input
-            type="text"
-            placeholder="Enter your weight in 'Kg'"
-            id="weight"
-            required
-          />
+          <button type="button" id="female" name="gender" value="female">
+            Female
+          </button>
         </div>
-      </div>
 
-      <div class="gender">
-        <button type="button" id="male" name="gender" value="male">Male</button>
+        <button type="submit" id="calculate">Calculate BMI</button>
 
-        <button type="button" id="female" name="gender" value="female">
-          Female
-        </button>
-      </div>
+        <div class="result">
+          <h2>BMI RESULT:</h2>
+          <p id="bmi-ans">0.00</p>
 
-      <button type="submit" id="calculate">Calculate BMI</button>
+          <h2>HEALTH STATUS:</h2>
+          <p id="health">-----</p>
 
-      <div class="result">
-        <h2>BMI RESULT:</h2>
-        <p id="bmi-ans">0.00</p>
+          <p id="recommend"></p>
+        </div>
 
-        <h2>HEALTH STATUS:</h2>
-        <p id="health">-----</p>
-
-        <p id="recommend"></p>
-      </div>
-
-
-      <i class="bi bi-arrow-counterclockwise"></i>
-    </form>
+        <i class="bi bi-arrow-counterclockwise"></i>
+      </form>
+    </main>
 
     <script src="/main.js"></script>
   </body>
