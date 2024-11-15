@@ -135,8 +135,6 @@ const runCalculations = () => {
 };
 
 calculate.addEventListener("click", (event) => {
-  // calculate.style.backgroundColor = "#fff";
-  // calculate.style.color = "#299cfb";
   event.preventDefault();
   runCalculations();
 });
